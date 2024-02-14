@@ -1,7 +1,8 @@
 let score = 0;
 let timer = 0;
 
-function startGame() {
+// Start the game
+function startGame() { 
     document.getElementById('score').style.display = 'none';
     document.getElementById('target').innerText = 'Click me!';
     document.getElementById('try-again').style.display = 'none';
@@ -10,6 +11,7 @@ function startGame() {
     timer = setTimeout(stopGame, 5000); // 5-second timer
 }
 
+// Stop the game
 function stopGame() {
     clearTimeout(timer); // Move clearTimeout to the beginning
     document.getElementById('score').innerText = `Score: ${score}`;
@@ -19,10 +21,12 @@ function stopGame() {
     clearScore(score);
 }
 
+// Clear the score
 function clearScore() {
     score = 0;
 }
 
+// For each click, increment and update score
 function handleClick() {
     if (timer) {
         score++;
@@ -32,6 +36,7 @@ function handleClick() {
     }
 }
 
+// move the target to the center
 function moveTarget() {
     const target = document.getElementById('target');
     const maxX = window.innerWidth - target.clientWidth;
