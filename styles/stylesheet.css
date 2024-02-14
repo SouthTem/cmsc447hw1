@@ -1,0 +1,110 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    display: block;
+}
+
+a:hover {
+    background-color: #f0f0f0;
+}
+
+li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+}
+
+.about img {
+    border-radius: 75%;
+    margin-right: 40px;
+}
+
+.about p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.about ul {
+    word-wrap:break-word;
+    list-style: none;
+    padding: 0;
+}
+
+.about ul li {
+    word-wrap:break-word;
+    margin-bottom: 10px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    overflow: hidden;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+  
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+
+#game-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    flex-direction: column;
+}
+
+#target {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#score {
+    font-size: 18px;
+    margin-top: 20px;
+    display: none;
+}
+
+#try-again {
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    color: #3498db;
+}
